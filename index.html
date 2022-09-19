@@ -1,13 +1,18 @@
 <DOCTYPE html>
     <html>
-
     <head>
         <title>Sayohat</title>
     </head>
     <style>
+        body{
+            text-align: center; 
+            background-color: rgba(39,68,86,0.05);
+        }
+
         * {
             color: rgb(39, 68, 86);
             margin: 0px;
+            border-radius: 2em;
         }
 
         ul.main_navigation {
@@ -16,103 +21,364 @@
         }
 
         ul.main_navigation li {
+            padding: 0px;
+            margin: 0px;
+            margin-top: 10px;
             display: inline-block;
-            font-size: 2em;
+            font-size: 1.2em;
             border-right: 0.1em solid rgb(39, 68, 86);
-            font-weight: bold;
-            color: green;
+            font-style: italic; 
+            color: white;
+            padding: 10px;
+            background-color: rgb(39,68,86);
+            border-radius: 2em;
         }
+
+        ul.city_navigation ul li{
+            text-align: left;
+            border-bottom: 1px solid rgb(20,30,40);
+            border-radius: 0px; 
+        }
+
+        ul.city_navigation{
+            list-style-type: none; 
+        }
+
+        ul.city_navigation>li{
+            max-width: 180px;
+            text-align: justify;
+        }
+
+        div.content{
+            width: 60%;
+            min-height: 100%;
+            background-color: rgba(39,68,86,0.05); 
+            display: inline-block;
+            text-align: center;
+        }
+
+        div.left_navigation{
+            width: 20%;
+        }
+
+        div.ads{
+            width: 20%;
+        }
+
+        footer{
+            width: 100%;
+            display: inline-block;
+            background-color: rgb(39,68,86);
+            color: white;
+        }
+
+        
+        div.gallery_container{
+            text-align: center;
+        }
+
+        figure.photogallery{
+            width: 200px;
+            display: inline-block;
+            max-height: 400px;
+            overflow: hidden;
+            border-radius: 0px;
+            margin: 1em;
+        }
+
+        figure.photogallery figcaption{
+            text-align: left;
+            display: inline-block;
+            border-radius: 0px;
+        }
+
+        figure.photogallery div.photos{
+            width: 200px;
+            height: 180px;
+            overflow: hidden;
+            padding-top: 1em;
+            text-align: center;
+        }
+
+
+        figure.photogallery div.image{
+            width: 150px;
+            height: 130px;
+            border-radius: 2em;
+            display: inline-block;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-origin: content-box;
+            background-color: rgb(39,68,86);
+            transition-property: all;
+            transition-duration: 2s; 
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        figure.photogallery div.photo2{
+            transform: rotateZ(-25deg);
+            position: relative; 
+            bottom: 100px; 
+            right: 10px; 
+        }
+
+        figure.photogallery div.photo3{
+            position: relative; 
+            bottom: 270px; 
+            transform: rotateZ(10deg);
+        }
+
+        figure.photogallery div.photo1{
+            transform: rotateZ(25deg);
+            position: relative;
+            top: 10px;
+            left: 10px;
+        }
+
+        figure.photogallery div.image:hover{
+            transform: rotateZ(0deg);
+            z-index: 10;
+            transform: scale(1.2);
+        }
+        
     </style>
 
     <body>
         <header>
+            <div style="width: 60%; display: inline-block;">
             <image src="images/logo.png" title="Sayohat"
-                style="border-radius: 100px;width: 100px; height: 100px; position: absolute; left: 0px; top: 0px; z-index: 10;border: 1px solid rgb(39,68,86)">
-                <h1
-                    style="display: inline-block;text-align: center; width: 100%;background-color: rgb(39,68,86);color: white;margin-top: 30px; height: 40px; border-top: 1px solid rgb(39,68,86);border-bottom: 1px solid rgb(39,68,86);">
-                    Саёҳат дар
-                    Тоҷикистон
-                </h1>
-                <ul class="main_navigation">
-                    <li>Асосӣ</li>
-                    <li>Харитаи сайёҳӣ</li>
-                    <li>Меҳмонхонаҳо</li>
-                    <li>Чиптаҳо</li>
-                    <li>Тамос</li>
-                </ul>
+                style="border-radius: 100px;
+                       width: 100px; 
+                       height: 100px; 
+                       position: absolute; 
+                       left: 2%; top: 10px; 
+                       z-index: 10;">
+
+                <div class="menu">
+                    <h1
+                        style=" display: 
+                                inline-block;
+                                text-align: center; 
+                                width: 100%;
+                                background-color: rgb(39,68,86);
+                                color: white;
+                                margin-top: 30px; 
+                                height: 40px; 
+                                border-top: 1px solid rgb(39,68,86);
+                                border-bottom: 1px solid rgb(39,68,86);">
+                        Саёҳат дар
+                        Тоҷикистон
+                    </h1>
+                    
+                    <ul class="main_navigation">
+                        <li style="color: rgb(0,180,0); font-weight: bold;">Асосӣ</li>
+                        <li>Харитаи сайёҳӣ</li>
+                        <li>Меҳмонхонаҳо</li>
+                        <li>Чиптаҳо</li>
+                        <li>Тамос</li>
+                    </ul>
+                </div>
+                </div>
         </header>
-        <div>
-            <ul class="city_navigation">
-                <li>
-                    Суғд
-                </li>
-                <li>
-                    Бӯстон
-                </li>
-                <li>
-                    Гулистон
-                </li>
-                <li>
-                    Истаравшан
-                </li>
-                <li>
-                    Исфара
-                </li>
-                <li>
-                    Истиқлол
-                </li>
-                <li>
-                    Конибодом
-                </li>
-                <li>
-                    Хуҷанд
-                </li>
-            </ul>
 
-            <ul class="city_navigation">
-                <li>
-                    Мухтори кӯҳистони Бадахшон
-                </li>
-                <li>
-                    Хоруғ
-                </li>
+        <div class="main" style="display: flex;">
+            <div class="left_navigation" >
+                <ul class="city_navigation">
+                    <li>
+                        <b style="font-size: 1.1em">Суғд</b>
+                        <ul>
+                            <li>
+                                Бӯстон
+                           </li>
+                            <li>
+                                Гулистон
+                            </li>
+                            <li>
+                                Истаравшан
+                            </li>
+                            <li>
+                                Исфара
+                            </li>
+                            <li>
+                                Истиқлол
+                            </li>
+                            <li>
+                                Конибодом
+                            </li>
+                            <li style="color: green; font-weight: bold;">
+                                Хуҷанд
+                            </li>
+                        </ul>
+                    </li>
+                    
+                </ul>
 
-            </ul>
-            <ul class="city_navigation">
-                <li>
-                    Тобеи Ҷумҳурӣ
-                </li>
-                <li>
-                    Ҳисор
-                </li>
-                <li>
-                    Турсунзода
-                </li>
+                <ul class="city_navigation">
+                    <li>
+                        <b style="font-size: 1.1em;">Мухтори кӯҳистони Бадахшон</b>
+                        <ul>
+                            <li>
+                                Хоруғ
+                            </li>
+                        </ul>
+                    </li>
 
-            </ul>
+                </ul>
+                <ul class="city_navigation">
+                    <li>
+                        <b style="font-size: 1.1em;">Тобеи Ҷумҳурӣ</b>
+                        <ul>
+                            <li>
+                                Ҳисор
+                            </li>
+                            <li>
+                                Турсунзода
+                            </li>
+            
+                        </ul>
+                    </li>
+                
+                </ul>
 
-            <ul class="city_navigation">
-                <li>
-                    Хатлон
-                </li>
-                <li>
-                    Кӯлоб
-                </li>
-                <li>
-                    Бохтар
-                </li>
-                <li>
-                    Норак
-                </li>
-                <li>
-                    Левақанд
-                </li>
-            </ul>
+                <ul class="city_navigation">
+                    <li>
+                        <b style="font-size: 1.1em;">Хатлон</b>
+                        <ul>
+                            <li>
+                                Кӯлоб
+                            </li>
+                            <li>
+                                Бохтар
+                            </li>
+                            <li>
+                                Норак
+                            </li>
+                            <li>
+                                Левақанд
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
 
-            <ul>
-                <li>Душанбе</li>
-            </ul>
+                <ul class="city_navigation">
+                    <li><b style="font-size: 1.1em;">Душанбе</b></li>
+                </ul>
+            </div>
+
+            <div class="content">        
+                  <figure style="padding: 1em;">
+                    <img style="width: 80%; height: auto;" src="images/museums/Khujand.webp">
+                    <figcaption style="text-align: left; margin-top: 1em;">
+                        <details>
+                        <summary><b style="cursor: pointer;font-style: italic; font-size: 1.2em; color: green;">Осорхонаи таърихии вилояти Суғд</b> ё (Қалъаи Хуҷанд) - бори нахуст соли 1986 дар шаҳри Хуҷанд ифтитоҳ шуда буд.
+                        Он яке аз осорхонаҳои бузург дар вилояти Суғд маҳсуб мешавад, ки дар он намунаҳое аз осори таърихи гузаштаи халқи тоҷик гирдоварӣ шудаанд.
+                        Бинои ҳозираи осорхона ба шакли иморати қадимаи анъанавии муҳофизатӣ сохта шудааст.</summary> Он аз як толори васеи болоӣ ва
+                        се толори калонҳаҷми зеризаминӣ иборат аст. Дар толори болоӣ ва ду толори зеризаминӣ намоишҳои осорхонавӣ созмон 
+                        дода шуда, дар як толори зеризаминӣ фонд (махзан) ҷой гирифтааст. Ҳоло масоҳати умумии осорхонаи навбунёд мутобиқ 
+                        ба лоиҳа 1279,2 м2,толори намоишӣ 1052,4 м2, ҷои нигаҳдории экспонатҳо 226,8 м2аст. Бурҷи он фарогирии 46,7 м2 масоҳат,118 метрбаландӣ 
+                        8,6 метрдиаметр мебошад.
+                        Дар осорхона қасрҳои муҳташам, сутунҳо, ҳайкалҳо, ки дар Тахти Ҷамшед қомат афрохтаанд ҳамчунин нусхабардорӣ аз катибаи
+                        Бесутун, нимпайкараи Дорои I ба маърази тамошобинон гузошта шудаанд.
+                        Ҳайкали Темурмалик – Қаҳрамони халқи тоҷик- ин муҷассама аз тарафи муҷассамасози ҷавону боистеъдод Давронҷон Раҳматов-дорандаи Ҷоизаи давлатии ба номи Камоли Хуҷандӣ сохта шуда, бо баландиаш3,5 метр, ва истифодаи 4тонна метали биринҷӣ фароҳам гардидааст.[6]
+                        Соли 2015 назди осорхонаи вилоят Боғи ба номи Камоли Хуҷандӣ бунёд ёфтааст, ки дар ҳудуди боғи истироҳатӣ айвонҳои миллӣ, роҳравҳои замонавӣ, гӯшаи ҳунарҳои халқӣ ва фаввораҳо бунёд ёфта, он ба таври муосир чароғон карда шудаанд. Ташкилёбии Мамнӯъгоҳи байналмилалии таърихию фарҳангӣ ва бостонию сайру
+                         сайёҳӣ ва намоиши ҳунармандии истеҳсолии ярмаркавии «Қалъаи Хуҷанд» дар Регистони Хуҷанд дар солҳои истиқлоли ҷумҳурӣ ба анҷом расид.
+                        </details>
+                        </figcaption>        
+                                
+                  </figure>
+
+                  <div class="gallery_container">
+                        <div class="gallery_box" style="display: inline-block;">
+                            <figure class="photogallery">
+                                <div class="photos">
+                                    <div class="image photo1" style="background-image: url(images/Khujand/bogi_kamoli_khujandi.jpg);"></div>
+                                    <div class="image photo2" style="background-image: url(images/Khujand/bogi_kamoli_khujandi2.jpg);"></div>
+                                    <div class="image photo3" style="background-image: url(images/Khujand/bogi_kamoli_khujandi3.jpg);"></div>
+                                </div>
+                                <figcaption>
+                                    <b style="cursor: pointer;font-style: italic; font-size: 1.2em; color: green;">
+                                    Боғи ба номи Камоли Хуҷандӣ</b> - дар шаҳри Хуҷанд, дар чапи соҳили Сирдарё бунёд шудааст. Боғи фарҳангӣ-фароғатии ба 
+                                    номи Камоли Хуҷандӣ дар бари рӯди Сир соли 1924 ташкил ёфта, расмикушоди он 1-уми майи соли 1939 баргузор гардидааст. 
+                                    Наздик як аср мешавад, ки ин макон ҷои истироҳату фароғати шаҳрвандону меҳмонон қарор дорад. Боғи фарҳангӣ-фароғатии ба 
+                                    номи Камоли Хуҷандӣ дар рӯ ба рӯи Театри мазҳака ва мусиқии Камоли Хуҷандӣ ва Осорхонаи таърихии вилояти Суғд бунёд гардидааст. 
+                                    Алҳол дарвозаи боғ 24 метр дарозӣ, 11 метру60 см. баландӣ дошта, бошаи сутунҳо аз маҳсулоти сохтмонии маҳаллӣ бино ёфта, 
+                                    аз 16 сутун иборат аст. 8-тои он аз тарафи рост, 8 адади дигар аз тарафи чап ба дарвоза шукӯҳу шаҳомати олӣ бахшидаанд.
+                                </figcaption>
+                            </figure><br>
+                            <span class="continue_text" style="float: right; 
+                                                                font-weight: bold;
+                                                                font-size: 2em;
+                                                                color: rgb(0,180,0);
+                                                                cursor: pointer;">
+                                ...
+                            </span>
+                        </div>
+
+
+                        <div class="gallery_box" style="display: inline-block;">
+                            <figure class="photogallery">
+                                <div class="photos">
+                                    <div class="image photo1" style="background-image: url(images/Khujand/haykali_ismoili_somoni.jpg);"></div>
+                                    <div class="image photo2" style="background-image: url(images/Khujand/haykali_ismoili_somoni2.jpg);"></div>
+                                    <div class="image photo3" style="background-image: url(images/Khujand/fontani_ismoili_somoni.jfif);"></div>
+                                </div>
+                                <figcaption>
+                                    <b style="cursor: pointer;font-style: italic; font-size: 1.2em; color: green;">
+                                        Мавзеи Исмоили Сомонӣ дар Хуҷанд</b> - дар шаҳри Хуҷанд, дар чапи соҳили Сирдарё бунёд шудааст. Боғи фарҳангӣ-фароғатии ба 
+                                    номи Камоли Хуҷандӣ дар бари рӯди Сир соли 1924 ташкил ёфта, расмикушоди он 1-уми майи соли 1939 баргузор гардидааст. 
+                                    Наздик як аср мешавад, ки ин макон ҷои истироҳату фароғати шаҳрвандону меҳмонон қарор дорад. Боғи фарҳангӣ-фароғатии ба 
+                                    номи Камоли Хуҷандӣ дар рӯ ба рӯи Театри мазҳака ва мусиқии Камоли Хуҷандӣ ва Осорхонаи таърихии вилояти Суғд бунёд гардидааст. 
+                                    Алҳол дарвозаи боғ 24 метр дарозӣ, 11 метру60 см. баландӣ дошта, бошаи сутунҳо аз маҳсулоти сохтмонии маҳаллӣ бино ёфта, 
+                                    аз 16 сутун иборат аст. 8-тои он аз тарафи рост, 8 адади дигар аз тарафи чап ба дарвоза шукӯҳу шаҳомати олӣ бахшидаанд.
+                                </figcaption>
+                            </figure><br>
+                            <span class="continue_text" style="float: right; 
+                                                                font-weight: bold;
+                                                                font-size: 2em;
+                                                                color: rgb(0,180,0);
+                                                                cursor: pointer;">
+                                ...
+                            </span>
+                        </div>
+
+
+                        <div class="gallery_box" style="display: inline-block;">
+                            <figure class="photogallery">
+                                <div class="photos">
+                                    <div class="image photo1" style="background-image: url(images/Khujand/bozori_panjshanbe.jpg);"></div>
+                                    <div class="image photo2" style="background-image: url(images/Khujand/bozori_panjshanbe2.jpg);"></div>
+                                    <div class="image photo3" style="background-image: url(images/Khujand/bozori_panjshanbe3.jpg);"></div>
+                                </div>
+                                <figcaption>
+                                    <b style="cursor: pointer;font-style: italic; font-size: 1.2em; color: green;">
+                                    Бозори Панҷшанбе</b> - дар шаҳри Хуҷанд, дар чапи соҳили Сирдарё бунёд шудааст. Боғи фарҳангӣ-фароғатии ба 
+                                    номи Камоли Хуҷандӣ дар бари рӯди Сир соли 1924 ташкил ёфта, расмикушоди он 1-уми майи соли 1939 баргузор гардидааст. 
+                                    Наздик як аср мешавад, ки ин макон ҷои истироҳату фароғати шаҳрвандону меҳмонон қарор дорад. Боғи фарҳангӣ-фароғатии ба 
+                                    номи Камоли Хуҷандӣ дар рӯ ба рӯи Театри мазҳака ва мусиқии Камоли Хуҷандӣ ва Осорхонаи таърихии вилояти Суғд бунёд гардидааст. 
+                                    Алҳол дарвозаи боғ 24 метр дарозӣ, 11 метру60 см. баландӣ дошта, бошаи сутунҳо аз маҳсулоти сохтмонии маҳаллӣ бино ёфта, 
+                                    аз 16 сутун иборат аст. 8-тои он аз тарафи рост, 8 адади дигар аз тарафи чап ба дарвоза шукӯҳу шаҳомати олӣ бахшидаанд.
+                                </figcaption>
+                            </figure><br>
+                            <span class="continue_text" style="float: right; 
+                                                                font-weight: bold;
+                                                                font-size: 2em;
+                                                                color: rgb(0,180,0);
+                                                                cursor: pointer;">
+                                ...
+                            </span>
+                        </div>
+                  </div>
+                  <footer>
+                    Copyright.2022
+                </footer>  
+            </div>
+
+            <div class="ads">
+
+            </div>
         </div>
+
 
     </body>
 
